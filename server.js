@@ -12,7 +12,7 @@ app.use(session({
 }));
 app.use(flash());
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   res.locals.flash = req.flash('flash');
   next();
 });
